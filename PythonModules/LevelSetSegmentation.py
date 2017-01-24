@@ -633,7 +633,7 @@ class LevelSetSegmentationWidget:
 
     # create segmentation labelMap
     labelMap = vtk.vtkImageData()
-    labelMap.DeepCopy( self.GetLogic().buildSimpleLabelMap( evolImageData, 0, 5 ) )
+    labelMap.DeepCopy( self.GetLogic().buildSimpleLabelMap( evolImageData, 5, 0 ) )
     labelMap.Update()
 
     currentLabelMapNode.CopyOrientation( currentVolumeNode )
